@@ -1,15 +1,21 @@
 <?php
-defined( 'ABSPATH' ) or exit;
-
 /**
  * Plugin Name: Easy Digital Downloads - Remove Zero Cents
  * Plugin URI: https://github.com/csalzano/edd-remove-zero-cents
  * Description: Removes ".00" from download prices in USD currency
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Corey Salzano
  * Author URI: https://breakfastco.xyz
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @package edd-remove-zero-cents
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Breakfast_EDD_Remove_Zero_Cents
  */
 class Breakfast_EDD_Remove_Zero_Cents {
 
