@@ -8,6 +8,8 @@
  * Author URI: https://breakfastco.xyz
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * GitHub Plugin URI: csalzano/edd-remove-zero-cents
+ * Primary Branch: main
  *
  * @package edd-remove-zero-cents
  */
@@ -52,7 +54,9 @@ class Breakfast_EDD_Remove_Zero_Cents {
 	 * @return int  The number of decimals places to use when formatting the amount.
 	 */
 	public static function remove_zero_cents( $decimals, $amount ) {
+		// Are we outputting taxes in checkout?
 		if ( self::$doing_taxes ) {
+			// Yes.
 			return $decimals;
 		}
 		return ( '.00' === substr( $amount, -3 ) ) ? 0 : $decimals;
